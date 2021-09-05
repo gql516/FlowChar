@@ -1,0 +1,19 @@
+#include<stdio.h>
+int gcd(int a,int c)
+{
+    while(c!=0)
+    {
+        int t=a%c;
+        a=c;
+        c=t;
+    }
+    return a;
+}
+
+int main()
+{
+    int m, n;
+    scanf("%d/%d", &m, &n);
+
+ printf("%d/%d", m/ gcd(m,n),n / gcd(m,n));
+}
